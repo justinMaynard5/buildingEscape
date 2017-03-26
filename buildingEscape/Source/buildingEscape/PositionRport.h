@@ -3,17 +3,17 @@
 #pragma once
 
 #include "Components/ActorComponent.h"
-#include "PositionReport.generated.h"
+#include "PositionRport.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BUILDINGESCAPE_API UPositionReport : public UActorComponent
+class BUILDINGESCAPE_API UPositionRport : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UPositionReport();
+	UPositionRport();
 
 protected:
 	// Called when the game starts
