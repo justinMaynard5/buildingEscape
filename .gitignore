@@ -2,13 +2,24 @@
 # Unreal Generated Files #
 ##########################
 */Build
+*/build
 */Binaries
 */DerivedDataCache
 */Intermediate
 */Saved
+*/.codelite
+*/.kdev4
 BuildingEscape/Content/StarterContent/
 
 ######################
 # VS Generated Files #
 ######################
 *.VC.db
+
+# Linux Project files
+ /*.pro
+ /*.kdev4
+ /*.codelite
+ /CMakeLists.txt
+ /Makefile
+ /*.pri
