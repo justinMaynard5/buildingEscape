@@ -22,4 +22,6 @@ BuildingEscape/Content/StarterContent/
  /*.codelite
  /CMakeLists.txt
  /Makefile
+/.vs
  /*.pri
+ /*.sln

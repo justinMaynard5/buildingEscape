@@ -29,4 +29,7 @@ private:
 		float reach = 5;
 		
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+	UInputComponent* Input = nullptr;
+
+	void Grab();
 };
