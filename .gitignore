@@ -24,3 +24,5 @@ BuildingEscape/Content/StarterContent/
  /Makefile
 /.vs
  /*.pri
+*.suo
+buildingEscape/.vs/buildingEscape/v15/ipch/AutoPCH/49c18b94c9075889/OPENDOOR.ipch

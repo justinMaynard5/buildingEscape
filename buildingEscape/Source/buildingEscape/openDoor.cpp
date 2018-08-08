@@ -3,6 +3,8 @@
 #include "buildingEscape.h"
 #include "openDoor.h"
 
+#define OUT 
+
 
 // Sets default values for this component's properties
 UopenDoor::UopenDoor()
@@ -19,8 +21,6 @@ UopenDoor::UopenDoor()
 void UopenDoor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 	owner = GetOwner();
 }
 
@@ -40,7 +40,7 @@ void UopenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (PressurePlate->IsOverlappingActor(ActorThatOpens))
+	if (GetTotalMassOnPlate() > 50.f) //TODO make into parameter
 	{
 		OpenDoor();
 		lastDoorOpenTime = GetWorld()->GetTimeSeconds();
@@ -52,5 +52,15 @@ void UopenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	}
 
 	
+}
+
+float UopenDoor::GetTotalMassOnPlate()
+{
+	float TotalMass = 0.0f;
+	TArray<AActor*> OverlapingActors;
+
+	PressurePlate->GetOverlappingActors(OUT OverlapingActors);
+
+	return TotalMass;
 }
 
